@@ -2,6 +2,8 @@
 
 This repository contains a self-contained proof and kernel-verified, zero-`sorry` **Lean 4 / Mathlib 4** formalization of **Conjecture 4.2(i)** from Zhi-Wei Sun's paper [*Arithmetic properties of some permanents*](https://arxiv.org/html/2108.07723v7) (arXiv:2108.07723v7, Eqs. 4.3 & 4.4), also listed as an open conjecture on [OEIS A085807](https://oeis.org/A085807).
 
+> **Independent proof and formalization.** This repository is an independent proof and Lean 4 formalization. After completing it we learned that the same conjecture had already been resolved in the AI-assisted open-problem registry **the-omega-institute/trureturing**: it was pre-registered as Issue [#22003](https://github.com/the-omega-institute/trureturing/issues/22003) on 2026-10-26, and its Lean 4 proof was merged in PR [#23353](https://github.com/the-omega-institute/trureturing/pull/23353) on 2026-10-29 (merge commit [`fe03ef4`](https://github.com/the-omega-institute/trureturing/commit/fe03ef488008aa93b395beab4d1b876d2c2efd98)). The present work was carried out independently and does not claim priority. Its distinguishing features are: (i) a self-contained proof of the general master theorem $\mathrm{per}(M)\equiv\det(M)\pmod p$ for signed cyclic-shift invariant matrices, without invoking the Brualdi–Newman (1965) circulant-matrix theorem; and (ii) extensions to powers $|j-k|^m$, odd prime powers $p^k$, and the exact shift boundary $s\in\{-1,0,1\}$.
+
 ## Main Results
 
 Let $p$ be an odd prime.
@@ -109,6 +111,7 @@ python3 scripts/verify.py
 * Zhi-Wei Sun, *Arithmetic properties of some permanents*, [arXiv:2108.07723v7](https://arxiv.org/html/2108.07723v7) (2022), Conjecture 4.2(i), Eqs. (4.3) and (4.4).
 
 * OEIS Foundation Inc., *Entry A085807: Permanent of the* $n \times n$ *matrix whose* $(i,j)$*-entry is* $|i-j|$, [https://oeis.org/A085807](https://oeis.org/A085807).
+* the-omega-institute/trureturing, [Issue #22003](https://github.com/the-omega-institute/trureturing/issues/22003) / [PR #23353](https://github.com/the-omega-institute/trureturing/pull/23353), merged 2026-10-29 (commit `fe03ef4`), independent Lean 4 proof of the same conjecture.
 
 ## Acknowledgments
 
