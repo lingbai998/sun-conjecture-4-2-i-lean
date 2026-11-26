@@ -9,7 +9,7 @@ Let $p$ be an odd prime.
 1. **Signed Cyclic-Shift Invariance Master Theorem** (`SunConjecture42i.perm_eq_det_of_signed_shift`):
    Let $T(x) = (x+1) \bmod p$ on $\mathbb{Z}/p\mathbb{Z}$, and define the sign $\varepsilon(x) = -1$ if $x = p-1$ and $\varepsilon(x) = 1$ otherwise. If a matrix $M \in M_p(\mathbb{F}_p)$ satisfies
 
-   $M_{T(i),\,T(j)} = \varepsilon(i)\varepsilon(j)\, M_{i,j} \quad \text{for all } i, j \in \mathbb{Z}/p\mathbb{Z}$,
+   $M_{T(i),T(j)} = \varepsilon(i)\varepsilon(j) M_{i,j} \quad \text{for all } i, j \in \mathbb{Z}/p\mathbb{Z}$,
 
    then
 
@@ -17,11 +17,11 @@ Let $p$ be an odd prime.
 
 2. **Conjecture 4.2(i), Eq. (4.3) / OEIS A085807** (`SunConjecture42i.sun_conjecture_4_2_i_eq_4_3`):
 
-   $\displaystyle \mathrm{per}[\,|j-k|\,] \equiv -\frac{1}{2} \pmod{p}, \qquad \text{i.e.,} \quad 2 \cdot \mathrm{per}[\,|j-k|\,] \equiv -1 \pmod{p}.$
+   $\displaystyle \mathrm{per}[|j-k|] \equiv -\frac{1}{2} \pmod{p}, \qquad \text{i.e.,} \quad 2 \cdot \mathrm{per}[|j-k|] \equiv -1 \pmod{p}.$
 
 3. **Conjecture 4.2(i), Eq. (4.4)** (`SunConjecture42i.sun_conjecture_4_2_i_eq_4_4`):
 
-   $\displaystyle \mathrm{per}[\,|j-k+1|\,] \equiv \frac{1}{2} \pmod{p}, \qquad \text{i.e.,} \quad 2 \cdot \mathrm{per}[\,|j-k+1|\,] \equiv 1 \pmod{p}.$
+   $\displaystyle \mathrm{per}[|j-k+1|] \equiv \frac{1}{2} \pmod{p}, \qquad \text{i.e.,} \quad 2 \cdot \mathrm{per}[|j-k+1|] \equiv 1 \pmod{p}.$
 
 ### Extensions (Numerically Verified, Not Formalized in Lean)
 
@@ -31,7 +31,7 @@ The same cyclic-conjugation mechanism suggests several direct generalizations. T
 
 * **General Powers**: For any integer $m \ge 1$ and odd prime $p$,
 
-  $\displaystyle \mathrm{per}[\,|j-k|^m\,] \equiv \sum_{c=1}^{p-1} (-1)^{mc} c^m \pmod{p}.$
+  $\displaystyle \mathrm{per}[|j-k|^m] \equiv \sum_{c=1}^{p-1} (-1)^{mc} c^m \pmod{p}.$
 
   In particular, for even $m$ this is $0 \pmod p$ if $(p-1)\nmid m$ and $-1 \pmod p$ if $(p-1)\mid m$; for odd $m$ it coincides with the Euler polynomial value $E_m(0) \pmod p$ (e.g., $-\frac{1}{2}$ for $m=1$, $\frac{1}{4}$ for $m=3$, $-\frac{1}{2}$ for $m=5$).
 
