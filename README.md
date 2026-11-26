@@ -45,7 +45,7 @@ Consider the cyclic shift permutation $\tau \in S_p$ given by $\tau(x) = (x+1) \
 
    $\displaystyle w(\tau \sigma \tau^{-1}) = \left(\prod_{i} \varepsilon(i)\right)\left(\prod_{i} \varepsilon(\sigma(i))\right) w(\sigma) = (-1)^2 w(\sigma) = w(\sigma).$
 
-2. **Orbit-Stabilizer Modulo** $p$: The cyclic group $\langle \tau \rangle \cong \mathbb{Z}/p\mathbb{Z}$ acts on $S_p$ by conjugation. Every non-trivial orbit has size $p$ (which vanishes in $\mathbb{F}_p$), so both $\mathrm{per}(M)$ and $\det(M)$ reduce modulo $p$ to the sum over the fixed points of conjugation—namely the centralizer $C_{S_p}(\tau) = \{\tau^c : 0 \le c < p\}$. Since $p$ is odd, $\tau$ is an even permutation, so every fixed point has sign $+1$, giving $\mathrm{per}(M) \equiv \det(M) \equiv \sum_{c=0}^{p-1} w(\tau^c) \pmod p$.
+2. **Orbit-Stabilizer Modulo** $p$: The cyclic group $\langle \tau \rangle \cong \mathbb{Z}/p\mathbb{Z}$ acts on $S_p$ by conjugation. Every non-trivial orbit has size $p$ (which vanishes in the field $\mathbb{F}$ of $p$ elements), so both $\mathrm{per}(M)$ and $\det(M)$ reduce modulo $p$ to the sum over the fixed points of conjugation—namely the centralizer of $\tau$ in $S_p$, $C(\tau) = \{\tau^c : 0 \le c < p\}$. Since $p$ is odd, $\tau$ is an even permutation, so every fixed point has sign $+1$, giving $\mathrm{per}(M) \equiv \det(M) \equiv \sum_{c=0}^{p-1} w(\tau^c) \pmod p$.
 
 3. **Closed-Form Evaluation**:
 
@@ -75,8 +75,8 @@ Consider the cyclic shift permutation $\tau \in S_p$ given by $\tau(x) = (x+1) \
 | `SunConjecture42i.sum_eq_sum_fixed_of_conj_invariant` | Conjugation-invariant sums over $S_p$ reduce to fixed points in $\mathbb{F}_p$ |
 | `SunConjecture42i.fixed_iff_exists_pow` | Centralizer of the $p$-cycle $\tau$ in $S_p$ is $\{\tau^c : 0 \le c < p\}$ |
 | `SunConjecture42i.perm_eq_det_of_signed_shift` | Master Theorem: $\mathrm{per}(M) \equiv \det(M) \pmod p$ |
-| `SunConjecture42i.sun_conjecture_4_2_i_eq_4_3` | Proof of Eq. (4.3) / [OEIS A085807](https://oeis.org/A085807): $2 \cdot \mathrm{per}[|j-k|] \equiv -1 \pmod p$ |
-| `SunConjecture42i.sun_conjecture_4_2_i_eq_4_4` | Proof of Eq. (4.4): $2 \cdot \mathrm{per}[|j-k+1|] \equiv 1 \pmod p$ |
+| `SunConjecture42i.sun_conjecture_4_2_i_eq_4_3` | Proof of Eq. (4.3) / [OEIS A085807](https://oeis.org/A085807): $2 \cdot \mathrm{per}[\vert j-k\vert] \equiv -1 \pmod p$ |
+| `SunConjecture42i.sun_conjecture_4_2_i_eq_4_4` | Proof of Eq. (4.4): $2 \cdot \mathrm{per}[\vert j-k+1\vert] \equiv 1 \pmod p$ |
 
 ## Verification
 
