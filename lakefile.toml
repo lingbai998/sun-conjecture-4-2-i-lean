@@ -1,0 +1,16 @@
+name = "sun_conjecture_4_2_i_lean"
+version = "0.1.0"
+keywords = ["math", "lean4", "number-theory", "permanent", "determinant"]
+defaultTargets = ["SunConjecture4_2_i"]
+
+[leanOptions]
+pp.unicode.fun = true
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "348837d3aa976624060d7c35c183fff587c5a24a"
+
+[[lean_lib]]
+name = "SunConjecture4_2_i"

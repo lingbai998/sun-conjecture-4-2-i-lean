@@ -1,0 +1,5 @@
+import SunConjecture4_2_i
+
+#print axioms SunConjecture42i.perm_eq_det_of_signed_shift
+#print axioms SunConjecture42i.sun_conjecture_4_2_i_eq_4_3
+#print axioms SunConjecture42i.sun_conjecture_4_2_i_eq_4_4
