@@ -17,21 +17,21 @@ Let $p$ be an odd prime.
 
 2. **Conjecture 4.2(i), Eq. (4.3) / OEIS A085807** (`SunConjecture42i.sun_conjecture_4_2_i_eq_4_3`):
 
-   $\displaystyle \mathrm{per}[\,|j-k|\,]_{1 \le j,k \le p} \equiv -\frac{1}{2} \pmod{p}, \qquad \text{i.e.,} \quad 2 \cdot \mathrm{per}[\,|j-k|\,]_{1 \le j,k \le p} \equiv -1 \pmod{p}.$
+   $\displaystyle \mathrm{per}[\,|j-k|\,] \equiv -\frac{1}{2} \pmod{p}, \qquad \text{i.e.,} \quad 2 \cdot \mathrm{per}[\,|j-k|\,] \equiv -1 \pmod{p}.$
 
 3. **Conjecture 4.2(i), Eq. (4.4)** (`SunConjecture42i.sun_conjecture_4_2_i_eq_4_4`):
 
-   $\displaystyle \mathrm{per}[\,|j-k+1|\,]_{1 \le j,k \le p} \equiv \frac{1}{2} \pmod{p}, \qquad \text{i.e.,} \quad 2 \cdot \mathrm{per}[\,|j-k+1|\,]_{1 \le j,k \le p} \equiv 1 \pmod{p}.$
+   $\displaystyle \mathrm{per}[\,|j-k+1|\,] \equiv \frac{1}{2} \pmod{p}, \qquad \text{i.e.,} \quad 2 \cdot \mathrm{per}[\,|j-k+1|\,] \equiv 1 \pmod{p}.$
 
 ### Extensions (Numerically Verified, Not Formalized in Lean)
 
 The same cyclic-conjugation mechanism suggests several direct generalizations. They are checked numerically in `scripts/verify.py`; they are **not** formalized in `SunConjecture4_2_i.lean`:
 
-* **Exact Shift Boundary**: The signed-shift invariance holds for $\mathrm{per}[|j-k+s|]_{1 \le j,k \le p}$ precisely for $s \in \{-1, 0, 1\}$, and fails at $s = 2$ (for $p = 5$, $\det \equiv 0 \pmod 5$ while $\mathrm{per} \equiv 2 \pmod 5$).
+* **Exact Shift Boundary**: The signed-shift invariance holds for $\mathrm{per}[|j-k+s|]$ precisely for $s \in \{-1, 0, 1\}$, and fails at $s = 2$ (for $p = 5$, $\det \equiv 0 \pmod 5$ while $\mathrm{per} \equiv 2 \pmod 5$).
 
 * **General Powers**: For any integer $m \ge 1$ and odd prime $p$,
 
-  $\displaystyle \mathrm{per}[\,|j-k|^m\,]_{1 \le j,k \le p} \equiv \sum_{c=1}^{p-1} (-1)^{mc} c^m \pmod{p}.$
+  $\displaystyle \mathrm{per}[\,|j-k|^m\,] \equiv \sum_{c=1}^{p-1} (-1)^{mc} c^m \pmod{p}.$
 
   In particular, for even $m$ this is $0 \pmod p$ if $(p-1)\nmid m$ and $-1 \pmod p$ if $(p-1)\mid m$; for odd $m$ it coincides with the Euler polynomial value $E_m(0) \pmod p$ (e.g., $-\frac{1}{2}$ for $m=1$, $\frac{1}{4}$ for $m=3$, $-\frac{1}{2}$ for $m=5$).
 
